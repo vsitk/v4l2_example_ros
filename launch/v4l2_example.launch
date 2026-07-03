@@ -1,0 +1,5 @@
+<launch>
+  <arg name="use_camera" default="true"/>
+  <node pkg="v4l2_example" type="v4l2_example_node" name="v4l2_example_node" if="$(arg use_camera)">
+  </node>
+</launch>

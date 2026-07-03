@@ -11,11 +11,10 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   cv_bridge
-  OpenCV
   image_transport
 )
 
-# find_package(OpenCV REQUIRED)
+find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -197,6 +196,9 @@ install(TARGETS ${PROJECT_NAME}_node
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+
+install(DIRECTORY
+  launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 #############
 ## Testing ##
